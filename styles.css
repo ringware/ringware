@@ -3,6 +3,7 @@
     src: url('/ringware/fonts/Moderniz[1].woff') format('woff');
 }
 
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -10,24 +11,26 @@
     font-family: 'Moderniz', sans-serif;
 }
 
+/* Body Styling */
 body {
     background: #000;
     color: white;
     text-align: center;
     font-weight: 300;
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.4s ease-in-out;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
+/* Page Transition Effects */
 .fade-in {
-    opacity: 1 !important;
+    opacity: 1;
 }
 
 .fade-out {
     opacity: 0;
 }
 
-/* --- Top Navigation Bar --- */
+/* Top Navigation Bar */
 .topbar {
     display: flex;
     justify-content: space-between;
@@ -37,24 +40,21 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* --- Logo Section --- */
+/* Logo Styling */
 .logo-container {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.logo-img {
-    height: 50px;
-    width: 50px;
-    transition: transform 0.3s ease-in-out;
+.logo-text {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.logo-img:hover {
-    transform: rotate(10deg);
-}
-
-/* --- Navigation Links --- */
+/* Navigation Bar */
 .nav {
     display: flex;
     gap: 30px;
@@ -67,15 +67,38 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 0.8;
-    transition: color 0.3s ease, transform 0.2s ease;
+    transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
 .nav a:hover {
+    opacity: 1;
     color: #ff6600;
     transform: scale(1.1);
 }
 
-/* --- Image Gallery --- */
+/* Logo Image */
+.logo-img {
+    height: 200px;
+    width: 200px;
+    max-width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-img:hover {
+    transform: rotate(10deg);
+}
+
+/* Button Styling */
+button, .nav a {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover, .nav a:hover {
+    transform: scale(1.05);
+}
+
+/* Gallery Section */
 .gallery {
     display: flex;
     justify-content: center;
@@ -97,11 +120,16 @@ body {
     transform: scale(1.05);
 }
 
-/* --- Footer --- */
+/* Footer */
 .footer {
     margin-top: 50px;
     padding: 20px;
     font-size: 14px;
     opacity: 0.6;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Button Press Effect */
+button:active, .nav a:active {
+    transform: scale(0.95);
 }
