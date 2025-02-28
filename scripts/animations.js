@@ -1,20 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    if (sessionStorage.getItem("fadeIn") === "true") {
-        document.body.classList.add("fade-in");
-        sessionStorage.removeItem("fadeIn"); // Remove so it doesn't stay forever
-    }
+    // Ensure the fade-in effect happens on page load
+    document.body.classList.add("loaded");
 
-    document.querySelectorAll(".nav a").forEach(link => {
+    // Smooth page transition when clicking links
+    document.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", function (event) {
-            event.preventDefault(); // Stop instant navigation
+            event.preventDefault();
             const href = this.getAttribute("href");
 
-            document.body.classList.add("fade-out"); // Start fade-out effect
-            sessionStorage.setItem("fadeIn", "true"); // Tell next page to fade in
+            // Apply fade-out effect before navigating
+            document.body.classList.add("fade-out");
 
             setTimeout(() => {
-                window.location.href = href; // Now load the new page
-            }, 500); // Delay increased to 500ms for a smooth transition
+                window.location.href = href;
+            }, 300); // Delay ensures fade-out plays before navigation
         });
     });
 });
