@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            document.title = "Home - Ringware";
-            document.querySelector(".logo-text").textContent = "Home";
+            let path = window.location.pathname.split("/").pop();
+            if (path === "" || path === "index.html") {
+                path = "Home";
+            } else {
+                path = path.replace(".html", "");
+            }
+            document.title = path.charAt(0).toUpperCase() + path.slice(1) + " - Ringware";
+            document.querySelector(".logo-text").textContent = path;
         });
     </script>
 </head>
