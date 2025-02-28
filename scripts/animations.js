@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.classList.add("fade-out"); // Start fade-out effect
             setTimeout(() => {
                 window.location.href = href; // Navigate after fade-out
-            }, 400); // Delay matches CSS transition (0.4s)
+            }, 700); // Delay matches CSS transition (0.4s)
         });
     });
 });
