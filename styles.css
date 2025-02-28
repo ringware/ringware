@@ -15,15 +15,19 @@ body {
     color: white;
     text-align: center;
     font-weight: 300;
-    opacity: 0; /* Prevents page flicker before animation */
-    transition: opacity 0.5s ease-in-out;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.4s ease-in-out;
 }
 
 .fade-in {
     opacity: 1 !important;
 }
 
-/* Top Navigation Bar */
+.fade-out {
+    opacity: 0;
+}
+
+/* --- Top Navigation Bar --- */
 .topbar {
     display: flex;
     justify-content: space-between;
@@ -31,9 +35,9 @@ body {
     background: #111;
     padding: 20px 40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transition: background 0.3s ease-in-out;
 }
 
+/* --- Logo Section --- */
 .logo-container {
     display: flex;
     align-items: center;
@@ -42,7 +46,7 @@ body {
 
 .logo-img {
     height: 50px;
-    width: auto;
+    width: 50px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -50,6 +54,7 @@ body {
     transform: rotate(10deg);
 }
 
+/* --- Navigation Links --- */
 .nav {
     display: flex;
     gap: 30px;
@@ -62,26 +67,15 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 0.8;
-    transition: opacity 0.3s ease, transform 0.2s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav a:hover {
-    opacity: 1;
-    transform: scale(1.1);
     color: #ff6600;
+    transform: scale(1.1);
 }
 
-/* Button Hover Effects */
-button, .nav a {
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-button:hover, .nav a:hover {
-    transform: scale(1.05);
-}
-
-/* Gallery Styling */
+/* --- Image Gallery --- */
 .gallery {
     display: flex;
     justify-content: center;
@@ -103,34 +97,11 @@ button:hover, .nav a:hover {
     transform: scale(1.05);
 }
 
-/* Footer */
+/* --- Footer --- */
 .footer {
     margin-top: 50px;
     padding: 20px;
     font-size: 14px;
     opacity: 0.6;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Page Load & Transition Effects */
-@keyframes slideIn {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.content, .gallery {
-    animation: slideIn 0.6s ease-in-out;
-}
-
-/* Smooth Fade Between Pages */
-.fade-out {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
 }
