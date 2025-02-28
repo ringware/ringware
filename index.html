@@ -15,10 +15,11 @@
             }
             document.title = path.charAt(0).toUpperCase() + path.slice(1) + " - Ringware";
             document.querySelector(".logo-text").textContent = path;
+            document.body.classList.add("fade-in");
         });
     </script>
 </head>
-<body>
+<body class="fade">
     <div class="topbar">
         <div class="logo-container">
             <img src="/ringware/logo/logowhitesmall.png" alt="Logo" class="logo-img">
@@ -37,7 +38,6 @@
     </div>
     <div class="footer">© 2025 Ringware. All rights reserved.</div>
 
-    <!-- Additional Scripts -->
     <script src="/ringware/scripts/navigation.js"></script> 
     <script src="/ringware/scripts/gallery.js"></script> 
     <script src="/ringware/scripts/animations.js"></script> 
