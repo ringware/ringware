@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+    document.body.style.opacity = "1"; // Ensure opacity starts at 1 after load
+
     // Apply fade-in effect on page load
-    document.body.classList.add("fade-in");
+    setTimeout(() => {
+        document.body.classList.add("fade-in");
+    }, 50); // Small delay to ensure smooth transition
 
     // Smooth page transition effect
     document.querySelectorAll("a").forEach(link => {
