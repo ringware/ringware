@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop - Ringware</title>
+    <title id="page-title">Shop - Ringware</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.title = "Shop - Ringware";
+            document.querySelector(".logo-text").textContent = "Shop";
+        });
+    </script>
 </head>
 <body>
     <div class="topbar">
         <div class="logo-container">
-            <img src="logo/logowhitesmall.png" alt="Logo">
-            <div class="logo">Shop</div>
+            <img src="logo/logowhitesmall.png" alt="Logo" class="logo-img">
+            <div class="logo-text">Shop</div>
         </div>
         <div class="nav">
             <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
             <a href="about.html">About</a>
         </div>
     </div>
     <div class="content">
         <h1>Welcome to the Shop</h1>
-        <p>Browse our latest collection of products.</p>
-        <div class="gallery">
-            <img src="https://source.unsplash.com/400x500/?shoes" alt="Product 1">
-            <img src="https://source.unsplash.com/400x500/?accessories" alt="Product 2">
-            <img src="https://source.unsplash.com/400x500/?fashion,trendy" alt="Product 3">
-        </div>
+        <p>Explore our latest products.</p>
     </div>
     <div class="footer">© 2025 Ringware. All rights reserved.</div>
 </body>
