@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unique Shop</title>
+    <title>Home - Unique Shop</title>
     <style>
         @font-face {
             font-family: 'Moderniz';
             src: url('fonts/Moderniz[1].woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
         }
         * {
             margin: 0;
@@ -23,25 +21,32 @@
             text-align: center;
             font-weight: 300;
         }
-        .header {
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background: #111;
-            padding: 80px 20px;
-            font-size: 50px;
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo {
+            font-size: 30px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
-        .subtext {
-            font-size: 18px;
-            margin-top: 15px;
-            opacity: 0.8;
+        .logo img {
+            height: 40px;
+            width: auto;
         }
         .nav {
-            margin: 30px 0;
             display: flex;
-            justify-content: center;
-            gap: 40px;
+            gap: 30px;
         }
         .nav a {
             color: white;
@@ -82,11 +87,15 @@
     </style>
 </head>
 <body>
-    <div class="header">Unique Shop</div>
-    <div class="subtext">Minimal | Modern | Streetwear</div>
-    <div class="nav">
-        <a href="#shop">Shop</a>
-        <a href="#about">About</a>
+    <div class="topbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo">
+            <div class="logo">Home</div>
+        </div>
+        <div class="nav">
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+        </div>
     </div>
     <div class="gallery">
         <img src="https://source.unsplash.com/400x500/?fashion" alt="Fashion 1">
