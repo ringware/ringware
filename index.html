@@ -7,14 +7,7 @@
     <link rel="stylesheet" href="/ringware/styles.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            let path = window.location.pathname.split("/").pop();
-            if (path === "" || path === "index.html") {
-                path = "Home";
-            } else {
-                path = path.replace(".html", "");
-            }
-            document.title = path.charAt(0).toUpperCase() + path.slice(1) + " - Ringware";
-            document.querySelector(".logo-text").textContent = path;
+            document.title = "Home - Ringware";
             document.body.classList.add("fade-in");
         });
     </script>
@@ -38,8 +31,6 @@
     </div>
     <div class="footer">© 2025 Ringware. All rights reserved.</div>
 
-    <script src="/ringware/scripts/navigation.js"></script> 
-    <script src="/ringware/scripts/gallery.js"></script> 
-    <script src="/ringware/scripts/animations.js"></script> 
+    <script src="/ringware/scripts/animations.js"></script>
 </body>
 </html>
