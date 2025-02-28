@@ -88,9 +88,9 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            let pageTitle = document.title;
-            let pageName = window.location.hash.substring(1) || "Home";
-            document.title = pageName.charAt(0).toUpperCase() + pageName.slice(1) + " - Unique Shop";
+            let path = window.location.pathname.split("/").pop();
+            let pageName = path || "Home";
+            document.title = pageName.charAt(0).toUpperCase() + pageName.slice(1) + " - Ringware";
             document.querySelector(".logo").textContent = document.title.split(" - ")[0];
         });
     </script>
@@ -102,8 +102,8 @@
             <div class="logo">Home</div>
         </div>
         <div class="nav">
-            <a href="#shop">Shop</a>
-            <a href="#about">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
         </div>
     </div>
     <div class="gallery">
