@@ -1,22 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.body.style.opacity = "1"; // Ensure opacity starts at 1 after load
+    // Fade in when the page loads
+    document.body.classList.add("fade-in");
 
-    // Apply fade-in effect on page load
-    setTimeout(() => {
-        document.body.classList.add("fade-in");
-    }, 50); // Small delay to ensure smooth transition
-
-    // Smooth page transition effect
-    document.querySelectorAll("a").forEach(link => {
+    // Add transition effect when navigating pages
+    document.querySelectorAll(".nav a").forEach(link => {
         link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent instant navigation
             const href = this.getAttribute("href");
-            if (!href.startsWith("http")) {  // Ignore external links
-                event.preventDefault();
-                document.body.classList.remove("fade-in");
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 300);  // Delay to match fade-out transition
-            }
+
+            document.body.classList.add("fade-out"); // Start fade-out effect
+            setTimeout(() => {
+                window.location.href = href; // Navigate after fade-out
+            }, 400); // Delay matches CSS transition (0.4s)
         });
     });
 });
