@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Home - Ringware</title>
+    <title>Home - Ringware</title>
     <link rel="stylesheet" href="styles.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            let path = window.location.pathname.split("/").pop();
-            let pageName = path.replace(".html", "") || "Home";
-            document.title = pageName.charAt(0).toUpperCase() + pageName.slice(1) + " - Ringware";
-            document.querySelector(".logo-text").textContent = document.title.split(" - ")[0];
+            document.title = "Home - Ringware";
+            document.querySelector(".logo-text").textContent = "Home";
         });
     </script>
 </head>
