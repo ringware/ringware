@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Moderniz';
+    src: url('fonts/Moderniz[1].woff') format('woff');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Moderniz', sans-serif;
+}
+body {
+    background: #000;
+    color: white;
+    text-align: center;
+    font-weight: 300;
+}
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.logo img {
+    height: 200px;
+    width: 200px;
+    max-width: 100%;
+}
+.nav {
+    display: flex;
+    gap: 30px;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+.nav a:hover {
+    opacity: 1;
+}
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 20px;
+}
+.gallery img {
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+.gallery img:hover {
+    filter: grayscale(0%);
+}
+.footer {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 14px;
+    opacity: 0.6;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
