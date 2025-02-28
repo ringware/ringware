@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop - Ringware</title>
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="/ringware/styles.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            document.querySelector(".logo-text").textContent = "Shop";
+            document.title = "Shop - Ringware";
+            document.body.classList.add("fade-in");
         });
     </script>
 </head>
-<body>
+<body class="fade">
     <div class="topbar">
         <div class="logo-container">
             <img src="/ringware/logo/logowhitesmall.png" alt="Logo" class="logo-img">
@@ -29,7 +30,6 @@
     </div>
     <div class="footer">© 2025 Ringware. All rights reserved.</div>
 
-    <script src="/ringware/scripts/navigation.js"></script> 
-    <script src="/ringware/scripts/shop.js"></script> 
+    <script src="/ringware/scripts/animations.js"></script>
 </body>
 </html>
