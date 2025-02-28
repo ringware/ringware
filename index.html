@@ -4,104 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title">Home - Ringware</title>
-    <style>
-        @font-face {
-            font-family: 'Moderniz';
-            src: url('fonts/Moderniz[1].woff') format('woff');
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Moderniz', sans-serif;
-        }
-        body {
-            background: #000;
-            color: white;
-            text-align: center;
-            font-weight: 300;
-        }
-        .topbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #111;
-            padding: 20px 40px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo {
-            font-size: 30px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .logo img {
-            height: 200px;
-            width: 200px;
-            max-width: 100%;
-        }
-        .nav {
-            display: flex;
-            gap: 30px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-        .nav a:hover {
-            opacity: 1;
-        }
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 50px 20px;
-        }
-        .gallery img {
-            width: 300px;
-            height: 450px;
-            border-radius: 10px;
-            object-fit: cover;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease-in-out;
-        }
-        .gallery img:hover {
-            filter: grayscale(0%);
-        }
-        .footer {
-            margin-top: 50px;
-            padding: 20px;
-            font-size: 14px;
-            opacity: 0.6;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let path = window.location.pathname.split("/").pop();
-            let pageName = path || "Home";
+            let pageName = path.replace(".html", "") || "Home";
             document.title = pageName.charAt(0).toUpperCase() + pageName.slice(1) + " - Ringware";
-            document.querySelector(".logo").textContent = document.title.split(" - ")[0];
+            document.querySelector(".logo-text").textContent = document.title.split(" - ")[0];
         });
     </script>
 </head>
 <body>
     <div class="topbar">
         <div class="logo-container">
-            <img src="logo/logowhitesmall.png" alt="Logo">
-            <div class="logo">Home</div>
+            <img src="logo/logowhitesmall.png" alt="Logo" class="logo-img">
+            <div class="logo-text">Home</div>
         </div>
         <div class="nav">
+            <a href="index.html">Home</a>
             <a href="shop.html">Shop</a>
             <a href="about.html">About</a>
         </div>
