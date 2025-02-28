@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Ringware</title>
+    <title id="page-title">About - Ringware</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.title = "About - Ringware";
+            document.querySelector(".logo-text").textContent = "About";
+        });
+    </script>
 </head>
 <body>
     <div class="topbar">
         <div class="logo-container">
-            <img src="logo/logowhitesmall.png" alt="Logo">
-            <div class="logo">About</div>
+            <img src="logo/logowhitesmall.png" alt="Logo" class="logo-img">
+            <div class="logo-text">About</div>
         </div>
         <div class="nav">
             <a href="index.html">Home</a>
             <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
         </div>
     </div>
     <div class="content">
         <h1>About Ringware</h1>
-        <p>Ringware is a modern fashion brand bringing you the latest trends with a unique style.</p>
-        <img src="https://source.unsplash.com/800x400/?fashion,style" alt="About Us Image">
+        <p>Learn more about our brand and mission.</p>
     </div>
     <div class="footer">© 2025 Ringware. All rights reserved.</div>
 </body>
