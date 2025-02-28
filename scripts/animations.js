@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Ensure the fade-in effect happens on page load
+    // Ensure the new page fades in after loading
     document.body.classList.add("loaded");
 
     // Smooth page transition when clicking links
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             setTimeout(() => {
                 window.location.href = href;
-            }, 300); // Delay ensures fade-out plays before navigation
+            }, 300); // Delay ensures fade-out animation completes
         });
     });
 });
