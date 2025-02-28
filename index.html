@@ -8,7 +8,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let path = window.location.pathname.split("/").pop();
-            if (path === "" || path === "index.html") {
+            if (path === "" || path === "index.html" || path === "home.html") {
                 path = "Home";
             } else {
                 path = path.replace(".html", "");
@@ -26,8 +26,8 @@
         </div>
         <div class="nav">
             <a href="/ringware/">Home</a>
-            <a href="/ringware/shop">Shop</a>
-            <a href="/ringware/about">About</a>
+            <a href="/ringware/shop.html">Shop</a>
+            <a href="/ringware/about.html">About</a>
         </div>
     </div>
     <div class="gallery">
